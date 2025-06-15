@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      direction: ltr;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      max-width: 700px;
+      margin: 40px 20px;
+      padding: 30px 40px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    h1 {
+      color: #0077cc;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .highlight {
+      color: #0077cc;
+      font-weight: bold;
+    }
+    button {
+      display: block;
+      margin: 20px auto 0;
+      background-color: #0077cc;
+      border: none;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>About Me</h1>
+  <div id="info">
+    <!-- Information will appear here -->
+  </div>
+
+  <button onclick="showMore()">Show More</button>
+</div>
+
+<script>
+  const basicInfo = `
+    <p>My name is <span class="highlight">Saad Ebrahim</span>.</p>
+    <p>I am <span class="highlight">16 years old</span>.</p>
+    <p>I am interested in <span class="highlight">programming and app development</span>.</p>
+  `;
+
+  const moreInfo = `
+    <p>I love learning programming languages like <span class="highlight">HTML, CSS,JavaScript and learn creat app</span>.</p>
+    <p>My goal is to become a professional developer and work on inspiring projects.</p>
+    <p>In my free time, I enjoy reading and following new technology trends.</p>
+  `;
+
+  const infoDiv = document.getElementById('info');
+
+  // Show basic info first
+  infoDiv.innerHTML = basicInfo;
+
+  function showMore() {
+    infoDiv.innerHTML += moreInfo;
+    // Hide the button after clicking
+    document.querySelector('button').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
